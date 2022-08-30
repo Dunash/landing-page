@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --main-color:rgb(230, 230, 230);
     --header-height:70px;
     --content-width:1000px;
@@ -205,4 +205,180 @@ footer{
         margin-top: 150px;
         width:80vw;
     }
+} */
+:root{
+    --primary-color:;
+    --secondary-color:;
+    --third-color:;
+
 }
+
+*,
+::after,
+:before{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    /* border:solid; */
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    height:100vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgb(255, 177, 177); 
+}
+
+#header{
+    position:fixed;
+    z-index: 1;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    background-color: antiquewhite;
+    border-bottom: rgba(240, 160, 63, 0.192) solid;
+    /* border:solid; */
+}
+
+#header-img{
+    object-fit:contain;
+    width:500px;
+    max-width:80%;
+    margin:auto 2rem;
+    /* border:solid; */
+}
+
+#nav-bar{
+    display:flex;
+    flex-direction: row;
+    margin:auto 2rem;
+    /* border:solid; */
+}
+
+#nav-bar .nav-link{
+    color:black;
+    text-decoration: none;
+    font-size: 2.5rem;
+    margin:auto 2rem;
+    padding:1rem;
+    /* border:solid; */
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 68px;
+    padding: 2rem;
+    background-color: rgb(250, 235, 215);
+    max-width:80%;
+}
+
+h1{
+    padding:1rem;
+    font-size: 3.5rem;
+}
+
+form{
+    padding: 1rem;
+}
+
+input{
+    display:block;
+    margin:10px auto;
+}
+
+#email{
+    padding:10px;
+}
+#submit{
+    padding:10px 20px;
+}
+
+input[type="submit"]{
+    background-color: rgba(255, 127, 80, 0.377);
+    transition:background-color 0.5s linear;
+}
+
+@media (hover:hover){
+    input:hover{
+        background-color: coral;
+    }
+}
+
+#text{
+    text-align: left;
+    margin: auto 2em;
+}
+
+#text h2{
+    margin-top: 2rem;;
+}
+
+#text p{
+    padding:1rem auto;
+}
+
+#video{
+    margin: 3rem auto;
+}
+
+#flex-container{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+}
+
+#flex-container article{
+    background-color: rgba(255, 99, 71, 0.555);
+    /* width: 30%; */
+    width:300px;
+    height:400px;
+    display:grid;
+    grid-template-rows: auto;
+    margin: 7px;
+}
+
+article h3{
+    padding:15px;
+}
+
+article h4{
+    padding:10px;
+}
+
+#flex-container article input{
+    padding:10px;
+}
+
+
+
+
+
+
+
+/* MEDIA START */
+@media screen and (max-width:1100px){
+    #nav-bar{
+        flex-direction:column;
+    }
+}
+
+@media screen and (max-width:800px){
+    #header{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* MEDIA END */

@@ -3,22 +3,19 @@
   <head>
     <title>Original trombones</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   </head>
   <body>
     <header id="header">
-       <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png" alt="original trombones logo" id="header-img">
-      <nav id="nav-bar">
-        <a href="#text" class="nav-link">Features</a>
-        <a href="#video" class="nav-link">How it works</a>
-        <a href="#flex-container" class="nav-link">Pricing</a>
-      </nav>
+        <img src="product-landing-page-logo.png" alt="original trombones logo" id="header-img"/>
+        <nav id="nav-bar">
+          <a href="#text" class="nav-link">Features</a>
+          <a href="#video" class="nav-link">How it works</a>
+          <a href="#flex-container" class="nav-link">Pricing</a>
+        </nav>  
     </header>
 
-    <maint>
-      <h2>Handcrafted, homemade masterpieces</h2>
+    <main id="main">
+      <h1>Handcrafted, homemade masterpieces</h1>
       <form id="form" action="https://www.freecodecamp.com/email-submit">
         <input type="email" name="email" id="email" placeholder="Enter your email address"></input>
         <input type="submit" name="submit" id="submit" value="GET STARTED"/>
@@ -57,8 +54,7 @@
           <p>Plays similar to a Trumpet Great for Jazz Bands Lorem ipsum dolor. Lorem ipsum.</p>
           <input type="submit" name="valve" id="valve_trombone_select" value="SELECT"/>
         </article>
-    </section>
-
+      </section>
     </main>
 
     <footer>
@@ -66,9 +62,27 @@
         <a href="" class="nav-link">Privacy</a>
         <a href="" class="nav-link">Terms</a>
         <a href="" class="nav-link">Contact</a>
-        <p>Copyright 2016, Original Trombones</p>
+        <p>Dunash 2022</p>
       </nav>
     </footer>
 
   </body>
 </html>
+
+<script>
+  let header = document.getElementById('header');
+  let height = header.offsetHeight;
+    document.getElementById('main').style['margin-top'] = height+'px';
+    console.log(getComputedStyle(main)['margin-top']);
+
+  addEventListener('resize', (event)=>{
+    header = document.getElementById('header');
+    height = header.offsetHeight;
+    document.getElementById('main').style['margin-top'] = height+'px';
+    console.log(getComputedStyle(main)['margin-top']);
+
+    // jQuery
+    // $(main).css('margin-top','1000px');
+    // $(main).prop('margin-top','1000px')
+  });
+</script>
